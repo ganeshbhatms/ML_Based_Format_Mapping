@@ -1,0 +1,22 @@
+{
+	"source" : {
+		"formatName": "supplierNFormat",
+		"formatFields": [ "Batch #", "Transaction #", "Buyer Name", "Supplier Name", 
+"Inv #", "PO #", "Invoice Date", "Invoice Amount", 
+"Invoice Currency", "Maturity Date", "Payment Date", "Tenor", 
+"Net Amount", "Gross Amount", "Discount Amount", 
+"Adjustment Amount", "Adjustment Reason Code", 
+"Payment Term", "Status", "Notes"
+		]
+	},
+	"target" : {
+		"formatName": "buyer1Format",
+		"formatFields": [ "batchReference", "transactionReference", "buyerName", 
+"supplierName", "invoiceReference", "poReference", 
+"invoiceDate", "invoiceAmount", "invoiceCurrency", "maturityDate", 
+"paymentDate", "tenor", "netAmount", "grossAmount", 
+"discountAmount", "adjustmentAmount", 
+"adjustmentReasonCode", "paymentTerm", "status", "notes"
+		]
+	}
+}

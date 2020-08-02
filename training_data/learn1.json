@@ -1,0 +1,46 @@
+{
+	"source" : {
+		"formatName": "supplier1Format",
+		"formatFields": [ "BATCH_REFERENCE", "TRANSACTION_REFERENCE",
+        	"BUYER_NAME", "SUPPLIER_NAME" , 
+       	"INVOICE_REFERENCE", "PO_REFERENCE",
+"INVOICE_DATE", "INVOICE_AMOUNT", "INVOICE_CURRENCY", 
+"MATURITY_DATE", "PAYMENT_DATE", "TENOR", "NET_AMOUNT",
+"GROSS_AMOUNT", "DISCOUNT_AMOUNT", 
+"ADJUSTMENT_AMOUNT", "ADJUSTMENT_REASON_CODE",
+"PAYMENT_TERM", "STATUS", "NOTES"
+		]
+	},
+	"target" : {
+		"formatName": "buyer1Format",
+		"formatFields": [ "batchReference", "transactionReference", "buyerName", 
+"supplierName", "invoiceReference", "poReference", 
+"invoiceDate", "invoiceAmount", "invoiceCurrency", "maturityDate", 
+"paymentDate", "tenor", "netAmount", "grossAmount", 
+"discountAmount", "adjustmentAmount", 
+"adjustmentReasonCode", "paymentTerm", "status", "notes"
+		]
+	},
+   	 "mappings": [
+        {"sourceField" : "BATCH_REFERENCE","targetField" : "batchReference"},
+{"sourceField" : "TRANSACTION_REFERENCE","targetField" : "transactionReference"},
+{"sourceField" : "BUYER_NAME","targetField" : "buyerName"},
+{"sourceField" : "SUPPLIER_NAME","targetField" : "supplierName"},
+{"sourceField" : "INVOICE_REFERENCE","targetField" : "invoiceReference"},
+{"sourceField" : "PO_REFERENCE","targetField" : "poReference"},
+{"sourceField" : "INVOICE_DATE","targetField" : "invoiceDate"},
+{"sourceField" : "INVOICE_AMOUNT","targetField" : "invoiceAmount"},
+{"sourceField" : "INVOICE_CURRENCY","targetField" : "invoiceCurrency"},
+{"sourceField" : "MATURITY_DATE","targetField" : "maturityDate"},
+{"sourceField" : "PAYMENT_DATE","targetField" : "paymentDate"},
+{"sourceField" : "TENOR","targetField" : "tenor"},
+{"sourceField" : "NET_AMOUNT","targetField" : "netAmount"},
+{"sourceField" : "GROSS_AMOUNT","targetField" : "grossAmount"},
+{"sourceField" : "DISCOUNT_AMOUNT","targetField" : "discountAmount"},
+{"sourceField" : "ADJUSTMENT_AMOUNT","targetField" : "adjustmentAmount"},
+{"sourceField" : "ADJUSTMENT_REASON_CODE","targetField" : "adjustmentReasonCode"},
+{"sourceField" : "PAYMENT_TERM","targetField" : "paymentTerm"},
+{"sourceField" : "STATUS","targetField" : "status"},
+{"sourceField" : "NOTES","targetField" : "notes"}
+    	]
+}

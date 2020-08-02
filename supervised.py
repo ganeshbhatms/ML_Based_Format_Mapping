@@ -63,7 +63,7 @@ def supervisedLearning():
     knn = KNeighborsClassifier(n_neighbors=1)
     clf = knn.fit(X_train_tfidf, encode)
 
-    pickle.dump(clf, open('/home/binarymonk/Desktop/ml/model/text_matching.pickle', 'wb'))
+    pickle.dump(clf, open('text_matching.pickle', 'wb'))
     
     return json.dumps({"sourceformatName": importData['source'].get('formatName'),
                "targetformatName": importData['target'].get('formatName'),

@@ -54,18 +54,25 @@ def CosineSimilarity(text1, text2):
         return int(round(similarity * 100))
 
 
-def FitModel(x, y):
+class FitModel:
     """
-    Function to train k-nearest Neighbors Classifier
+     Function to train k-nearest Neighbors Classifier
     :param x: list
     :param y: list
     :return: k-nearest Neighbors Classifier
     """
-    encode = le.fit_transform(y)
 
-    X_train_counts = count_vect.fit_transform(x)
-    X_train_tfidf = tfidf_transformer.fit_transform(X_train_counts)
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+        self.Encode = le.fit(y)
+        self.encode = le.transform(y)
+        self.x_train_counts = count_vect.fit(x)
+        self.X_train_counts = count_vect.transform(x)
+        self.x_train_tfidf = tfidf_transformer.fit(self.X_train_counts)
+        self.X_train_tfidf = tfidf_transformer.transform(self.X_train_counts)
 
-    knn = KNeighborsClassifier(n_neighbors=1, metric='cosine')
-    clf = knn.fit(X_train_tfidf, encode)
-    return clf
+    def model(self):
+        knn = KNeighborsClassifier(n_neighbors=1, metric='cosine')
+        clf = knn.fit(self.X_train_tfidf, self.encode)
+        return clf
